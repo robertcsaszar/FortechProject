@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortech - Project Management Tool</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+<div id="topbar"><div id="title">Project Management Tool</div></div>
+<div class="sidebar">
+  <ul>
+    <li><a id="overview">Project Overview</a></li>
+    <li><a id="addIssue">Add Issue</a></li>
+    <li><a id="createSprint">Create Sprint</a></li>
+    <li><a id="selectSprint">Select Sprint</a></li>
+    <li><a id="filterIssue">Filter</a></li>
+</ul>
+</div>
+
+<div class="main">
+  <h2 id="overview"></h2>
+  <div class="cleanOverview">
+  </div>
+
+  <div id="add-issue">
+    <h1>Add a new issue</h1>
+    <form>
+      <label for="type">Type</label>
+      <select id="selectType">
+        <option value="Feature">Feature</option>
+        <option value="Bug">Bug</option>
+        <option value="Task">Task</option>
+      </select>
+      <br>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <label for="sprint">Sprint</label>
+      <select id="selectSprint2">
+      </select>
+      <label for="assignee">Assignee</label>
+      <select id="selectAssignee">
+      </select>
+      <label for="descr">Description</label>
+      <input type="text" id="descr" name="descr">
+
+      <label for="comm">Comments (separate multiple comments by ";")</label>
+      <textarea rows="3" cols="25" id="comm" name="comm"></textarea>
+
+      <input type="button" id="addBtn" value="add">
+    </form>
+  </div>
+
+  <div id="update-issue">
+    <h1>Details for issue (can be changed)</h1>
+    <form>
+      <label for="type">Type</label>
+      <select id="selectTypeUpdate">
+        <option value="Feature">Feature</option>
+        <option value="Bug">Bug</option>
+        <option value="Task">Task</option>
+      </select>
+      <br>
+      <label for="name">Name</label>
+      <input type="text" id="nameUpdate" name="name">
+      <label for="assignee">Assignee</label>
+      <select id="selectAssigneeUpdate">
+      </select>
+      <label for="descr">Description</label>
+      <input type="text" id="descrUpdate" name="descr">
+
+      <label for="status">Status</label>
+      <select id="selectStatusUpdate">
+      </select>
+
+      <label for="comm">Comments (separate multiple comments by ";")</label>
+      <textarea rows="3" cols="25" id="commUpdate" name="comm"></textarea>
+
+      <input type="button" id="updateBtn" value="save changes">
+      <input type="button" id="cancelBtn" value="cancel">
+    </form>
+  </div>
+
+  <div id="create-sprint">
+    <h1>Create sprint</h1>
+    <form>
+      <label for="sprintName">Sprint name</label>
+      <input type="text" id="sprintName" name="sprintName">
+
+      <input type="button" id="createSprintBtn" value="create">
+    </form>
+  </div>
+
+  <div id="add-subtask">
+    <h1>Add subtasks</h1>
+    <form id="subtask-form">
+    </form>
+    <input type="button" id="addSubTaskBtn" value="add">
+  </div>
+</div>
+
+<!-- Load Scripts -->
+<!-- Custom JavaScript -->
+<script src="assets/js/data.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/issue.js"></script>
+<script src="assets/js/initialize.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
